@@ -1,1 +1,1 @@
-addLexecutable(test The_Sea_Batle.cpp)
+addLexecutable(test The_Sea_Batle(Code).cpp)

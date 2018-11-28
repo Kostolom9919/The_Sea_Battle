@@ -6,10 +6,10 @@
 #include<math.h>
 #include<time.h>
 #include<locale.h>
-#include<unistd.h>  //для sleep() - Пауза на кол-во секунд
+#include<unistd.h>  //Г¤Г«Гї sleep() - ГЏГ ГіГ§Г  Г­Г  ГЄГ®Г«-ГўГ® Г±ГҐГЄГіГ­Г¤
 #include<Windows.h>
-//printf("%c",7); - Воспроизведение звука
-//printf("%c",219); - Корабль
+//printf("%c",7); - Г‚Г®Г±ГЇГ°Г®ГЁГ§ГўГҐГ¤ГҐГ­ГЁГҐ Г§ГўГіГЄГ 
+//printf("%c",219); - ГЉГ®Г°Г ГЎГ«Гј
 
 int local=0;
 
@@ -19,11 +19,11 @@ void vivod1(int a[12][12],int b[12][12]) {
 	setlocale(LC_ALL,"Rus");
 	if(h==1)
 		if(local==1)
-			printf("\n            Ваши корабли                  Поле ваших обстрелов        \n");
+			printf("\n            Г‚Г ГёГЁ ГЄГ®Г°Г ГЎГ«ГЁ                  ГЏГ®Г«ГҐ ГўГ ГёГЁГµ Г®ГЎГ±ГІГ°ГҐГ«Г®Гў        \n");
 		else
 			printf("\n            Yours ships                  Field of your shelling       \n");
 	else if(local==1)
-		printf("\n\n         Корабли компьютера            Поле обстрелов компьютера      \n");
+		printf("\n\n         ГЉГ®Г°Г ГЎГ«ГЁ ГЄГ®Г¬ГЇГјГѕГІГҐГ°Г             ГЏГ®Г«ГҐ Г®ГЎГ±ГІГ°ГҐГ«Г®Гў ГЄГ®Г¬ГЇГјГѕГІГҐГ°Г       \n");
 	else
 		printf("\n\n           Computer ships          The field of shelling the computer \n");
 	printf("\n    A  B  C  D  E  F  G  H  I  J      A  B  C  D  E  F  G  H  I  J    \n");
@@ -91,7 +91,7 @@ int main() {
 
 		M1:
 			system("cls");
-			HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);// для получения дескриптора
+			HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);// Г¤Г«Гї ГЇГ®Г«ГіГ·ГҐГ­ГЁГї Г¤ГҐГ±ГЄГ°ГЁГЇГІГ®Г°Г 
 			SetConsoleTextAttribute(hConsole, (WORD) ((1 << 4) | 3));
 			printf("\n\n");
 			printf("\n       ##     ##     ##     ####       ##     ##   #     ##         ###     ");
@@ -116,7 +116,7 @@ int main() {
 				setlocale(LC_ALL,"Rus");
 			} else
 				printf("%+33c", c[1]);
-			if(local==1)printf("1.Начать игру\n\n");
+			if(local==1)printf("1.ГЌГ Г·Г ГІГј ГЁГЈГ°Гі\n\n");
 			else
 				printf("1.Begin game\n\n");
 			if(local==1) {
@@ -125,7 +125,7 @@ int main() {
 				setlocale(LC_ALL,"Rus");
 			} else
 				printf("%+35c", c[2]);
-			if(local==1)printf("2.Настройки\n\n");
+			if(local==1)printf("2.ГЌГ Г±ГІГ°Г®Г©ГЄГЁ\n\n");
 			else
 				printf("2.Options\n\n");
 			if(local==1) {
@@ -134,17 +134,17 @@ int main() {
 				setlocale(LC_ALL,"Rus");
 			} else
 				printf("%+37c", c[3]);
-			if(local==1)printf("3.Выход\n\n");
+			if(local==1)printf("3.Г‚Г»ГµГ®Г¤\n\n");
 			else
 				printf("3.Exit\n\n");
 			for (i=1; i<=3; i++) {
 				printf("\n");
 			}
-			if(local==1)printf("W-вверх, S-вниз, Esc-выход, Enter");
+			if(local==1)printf("W-ГўГўГҐГ°Гµ, S-ГўГ­ГЁГ§, Esc-ГўГ»ГµГ®Г¤, Enter");
 			else
 				printf("W-up, S-down, Esc-exit Enter");
 			printf("\n");
-			if(local==1)printf("Разработано: Группа 2 ТМП-42");
+			if(local==1)printf("ГђГ Г§Г°Г ГЎГ®ГІГ Г­Г®: ГѓГ°ГіГЇГЇГ  2 Г’ГЊГЏ-42");
 			else
 				printf("Created: Group 2 TMP-42");
 
@@ -227,12 +227,12 @@ int main() {
 				else w=30;
 
 				if(local==1)
-					printf("\n Хотите случайное расположение кораблей? (1-Да)\n");
+					printf("\n Г•Г®ГІГЁГІГҐ Г±Г«ГіГ·Г Г©Г­Г®ГҐ Г°Г Г±ГЇГ®Г«Г®Г¦ГҐГ­ГЁГҐ ГЄГ®Г°Г ГЎГ«ГҐГ©? (1-Г„Г )\n");
 				else
 					printf("\n Do you want a random location of ships? (1-Yes)\n");
 				x=getch();
 				if(x==27)goto M1;
-				//----------------ИНИЦИАЛИЗАЦИЯ-КОРАБЛЕЙ----------------//
+				//----------------Г€ГЌГ€Г–Г€ГЂГ‹Г€Г‡ГЂГ–Г€Гџ-ГЉГЋГђГЂГЃГ‹Г…Г‰----------------//
 				for(i=0; i<=11; i++) {
 					a1[i][0]=1;
 					a1[0][i]=1;
@@ -297,11 +297,11 @@ int main() {
 									do {
 										system("cls");
 										vivod1(a1,a2);
-										if(local==1) printf("Введите координаты %d палубного корабля\n",i);
+										if(local==1) printf("Г‚ГўГҐГ¤ГЁГІГҐ ГЄГ®Г®Г°Г¤ГЁГ­Г ГІГ» %d ГЇГ Г«ГіГЎГ­Г®ГЈГ® ГЄГ®Г°Г ГЎГ«Гї\n",i);
 										else printf("Enter the coordinates of the %d deck ship\n",i);
-										if(i<4)if(local==1)printf("%d корабль",j);
+										if(i<4)if(local==1)printf("%d ГЄГ®Г°Г ГЎГ«Гј",j);
 											else printf("%d ship",j);
-										if(local==1)printf("\nВведите столбец ");
+										if(local==1)printf("\nГ‚ГўГҐГ¤ГЁГІГҐ Г±ГІГ®Г«ГЎГҐГ¶ ");
 										else printf("\nEnter column ");
 										ran=0;
 										ran=getch();
@@ -343,9 +343,9 @@ int main() {
 												break;
 										}
 									} while(ran2>10);
-									if(local==1)printf("\nЕсли вы хотите выбрать линию 1, после выбора линии нажмите ENTER");
+									if(local==1)printf("\nГ…Г±Г«ГЁ ГўГ» ГµГ®ГІГЁГІГҐ ГўГ»ГЎГ°Г ГІГј Г«ГЁГ­ГЁГѕ 1, ГЇГ®Г±Г«ГҐ ГўГ»ГЎГ®Г°Г  Г«ГЁГ­ГЁГЁ Г­Г Г¦Г¬ГЁГІГҐ ENTER");
 									else printf("\nIf you want select line 1, after select line press ENTER");
-									if(local==1)printf("\nВведите номер строки ");
+									if(local==1)printf("\nГ‚ГўГҐГ¤ГЁГІГҐ Г­Г®Г¬ГҐГ° Г±ГІГ°Г®ГЄГЁ ");
 									else printf("\nEnter the line number ");
 									c1=getche();
 									if(c1==27)goto M1;
@@ -363,7 +363,7 @@ int main() {
 								} while((ran1<1)||(ran1>10)||(a1[ran1][ran2]>0));
 								prov1=0;
 								if(i>1) {
-									if(local==1)printf("\nВыберите стрелочками в какую сторону будет строится корабль ");
+									if(local==1)printf("\nГ‚Г»ГЎГҐГ°ГЁГІГҐ Г±ГІГ°ГҐГ«Г®Г·ГЄГ Г¬ГЁ Гў ГЄГ ГЄГіГѕ Г±ГІГ®Г°Г®Г­Гі ГЎГіГ¤ГҐГІ Г±ГІГ°Г®ГЁГІГ±Гї ГЄГ®Г°Г ГЎГ«Гј ");
 									else printf("\nChoose the arrows to be built ship ");
 									getch();
 									c1=getch();
@@ -399,7 +399,7 @@ int main() {
 									prov1=1;
 								}
 								if(prov1==0) {
-									if(local==1)printf("\nНет места");
+									if(local==1)printf("\nГЌГҐГІ Г¬ГҐГ±ГІГ ");
 									else printf("\nNot enough");
 									sleep(1);
 								}
@@ -458,7 +458,7 @@ int main() {
 						if(b1[i][j]==1)b1[i][j]=0;
 					}
 				prov2=0;
-				//----------------------ХОД-ИГРОКА----------------------//
+				//----------------------Г•ГЋГ„-Г€ГѓГђГЋГЉГЂ----------------------//
 
 				for(t=1; t<=w; t++) {
 					do {
@@ -467,7 +467,7 @@ int main() {
 								ran2=0;
 								system("cls");
 								vivod1(a1,a2);
-								if(local==1)printf("\nНажмите на клавишу нужного столбца ");
+								if(local==1)printf("\nГЌГ Г¦Г¬ГЁГІГҐ Г­Г  ГЄГ«Г ГўГЁГёГі Г­ГіГ¦Г­Г®ГЈГ® Г±ГІГ®Г«ГЎГ¶Г  ");
 								else printf("\nClick on the button of the selected column ");
 								ran=getch();
 								if(ran==27)goto M1;
@@ -504,7 +504,7 @@ int main() {
 										ran2=10;
 										break;
 									default:
-										if(local==1)printf("\nТакого столбца нет!");
+										if(local==1)printf("\nГ’Г ГЄГ®ГЈГ® Г±ГІГ®Г«ГЎГ¶Г  Г­ГҐГІ!");
 										else printf("\nThe entered column is missing!");
 										ran2=11;
 										sleep(1);
@@ -514,10 +514,10 @@ int main() {
 							do {
 								system("cls");
 								vivod1(a1,a2);
-								if(local==1)printf("\nНажмите на клавишу нужного столбца ");
+								if(local==1)printf("\nГЌГ Г¦Г¬ГЁГІГҐ Г­Г  ГЄГ«Г ГўГЁГёГі Г­ГіГ¦Г­Г®ГЈГ® Г±ГІГ®Г«ГЎГ¶Г  ");
 								else printf("\nClick on the button of the selected column ");
 								printf("%c",ran);
-								if(local==1)printf("\nВведите номер строки ");
+								if(local==1)printf("\nГ‚ГўГҐГ¤ГЁГІГҐ Г­Г®Г¬ГҐГ° Г±ГІГ°Г®ГЄГЁ ");
 								else printf("\nEnter the line number ");
 								c1=getch();
 								if(c1==27)goto M1;
@@ -535,7 +535,7 @@ int main() {
 								} else ran1=(int)(c1)-48;
 							} while((ran1<1)||(ran1>10));
 							if ((b1[ran1][ran2]==1)||(b1[ran1][ran2]<0)) {
-								if(local==1)printf("\nСтреляйте заного\n");
+								if(local==1)printf("\nГ‘ГІГ°ГҐГ«ГїГ©ГІГҐ Г§Г Г­Г®ГЈГ®\n");
 								else printf("\nShoot again\n");
 								sleep(1);
 							}
@@ -543,7 +543,7 @@ int main() {
 						if (b1[ran1][ran2]==0) {
 							b1[ran1][ran2]=1;
 							a2[ran1][ran2]=1;
-							if(local==1)printf("\nВы промахнулись\n");
+							if(local==1)printf("\nГ‚Г» ГЇГ°Г®Г¬Г ГµГ­ГіГ«ГЁГ±Гј\n");
 							else printf("\nYou missed");
 							prov1=0;
 							sleep(1);
@@ -558,10 +558,10 @@ int main() {
 									if((b1[i][j]<0)&&((b1[i-1][j]>1)||(b1[i+1][j]>1)||(b1[i][j-1]>1)||(b1[i][j+1]>1)))proof1=1;
 							if(proof1==1) {
 
-								if(local==1)printf("\n%cПопал!\n",sound);
+								if(local==1)printf("\n%cГЏГ®ГЇГ Г«!\n",sound);
 								else printf("\n%cHas got!\n",sound);
 							} else {
-								if(local==1)printf("\n%c%c%cУничтожил!\n",sound,sound,sound);
+								if(local==1)printf("\n%c%c%cГ“Г­ГЁГ·ГІГ®Г¦ГЁГ«!\n",sound,sound,sound);
 								else printf("\n%c%c%cDestroyed!\n",sound,sound,sound);
 								for(i=1; i<=10; i++)
 									for(j=1; j<=10; j++)
@@ -576,7 +576,7 @@ int main() {
 						}
 					} while((baLL1<20)&&(prov1==1));
 
-					//--------------------ХОД-КОМПЬЮТЕРА--------------------//
+					//--------------------Г•ГЋГ„-ГЉГЋГЊГЏГњГћГ’Г…ГђГЂ--------------------//
 
 					if(baLL1<20)
 						do {
@@ -658,7 +658,7 @@ int main() {
 								prov2=0;
 								system("cls");
 								vivod1(a1,a2);
-								if(local==1)printf("\nКомпьютер промахнулся\n");
+								if(local==1)printf("\nГЉГ®Г¬ГЇГјГѕГІГҐГ° ГЇГ°Г®Г¬Г ГµГ­ГіГ«Г±Гї\n");
 								else printf("\nComputer missed\n");
 								sleep(1);
 							} else if (a1[ran1][ran2]>1) {
@@ -673,11 +673,11 @@ int main() {
 									x2[p2+1]=ran2;
 									p2+=2;
 									system("cls");
-									if(local==1)printf("\n%cКомпьютер попал\n",sound);
+									if(local==1)printf("\n%cГЉГ®Г¬ГЇГјГѕГІГҐГ° ГЇГ®ГЇГ Г«\n",sound);
 									else printf("\n%cComputer hit\n",sound);
 								} else {
 									system("cls");
-									if(local==1)printf("\n%c%c%cКомпьютер уничтожил ваш корабль\n",sound,sound,sound);
+									if(local==1)printf("\n%c%c%cГЉГ®Г¬ГЇГјГѕГІГҐГ° ГіГ­ГЁГ·ГІГ®Г¦ГЁГ« ГўГ Гё ГЄГ®Г°Г ГЎГ«Гј\n",sound,sound,sound);
 									else printf("\n%c%c%cComputer destroyed your ship\n",sound,sound,sound);
 									for(i=1; i<=10; i++)
 										for(j=1; j<=10; j++)
@@ -691,7 +691,7 @@ int main() {
 								}
 								baLL2++;
 								vivod1(a1,a2);
-								if(local==1)printf("Нажмите Enter");
+								if(local==1)printf("ГЌГ Г¦Г¬ГЁГІГҐ Enter");
 								else printf("Press the Enter");
 								prov2=1;
 								x=getch();
@@ -703,23 +703,23 @@ int main() {
 						system("cls");
 						vivod1(a1,a2);
 						vivod1(b1,b2);
-						if(local==1)printf("\nИгра окончена за %d ход(-ов/-а)\n",t);
+						if(local==1)printf("\nГ€ГЈГ°Г  Г®ГЄГ®Г­Г·ГҐГ­Г  Г§Г  %d ГµГ®Г¤(-Г®Гў/-Г )\n",t);
 						else printf("\nThe game is over in %d moves",t);
 						break;
 					}
 				}
 				if(baLL1>baLL2)
-					if(local==1)printf("\nВы победили!");
+					if(local==1)printf("\nГ‚Г» ГЇГ®ГЎГҐГ¤ГЁГ«ГЁ!");
 					else printf("\nYou win!");
 				else if(baLL1<baLL2)
-					if(local==1)printf("\nВы проиграли");
+					if(local==1)printf("\nГ‚Г» ГЇГ°Г®ГЁГЈГ°Г Г«ГЁ");
 					else printf("\nYou lose");
-				else if(baLL1=baLL2)printf("\nЭто невероятно!Ничья!");
+				else if(baLL1=baLL2)printf("\nГќГІГ® Г­ГҐГўГҐГ°Г®ГїГІГ­Г®!ГЌГЁГ·ГјГї!");
 				else printf("\nThat's incredible!Draw!");
-				if(local==1)printf("\n%d/20 против %d/20 баллов\n",baLL1,baLL2);
+				if(local==1)printf("\n%d/20 ГЇГ°Г®ГІГЁГў %d/20 ГЎГ Г«Г«Г®Гў\n",baLL1,baLL2);
 				else
 					printf("\n%d/20 vs %d/20 points\n",baLL1,baLL2);
-				if(local==1)printf("Для возвращения к меню нажмите любую клавишу");
+				if(local==1)printf("Г„Г«Гї ГўГ®Г§ГўГ°Г Г№ГҐГ­ГЁГї ГЄ Г¬ГҐГ­Гѕ Г­Г Г¦Г¬ГЁГІГҐ Г«ГѕГЎГіГѕ ГЄГ«Г ГўГЁГёГі");
 				else printf("To return to the menu, press any key");
 				getch();
 				break;
@@ -734,7 +734,7 @@ int main() {
 
 					system("cls");
 					printf("\n\n\n\n\n");
-					if (local==1)printf("                                    Настройки");
+					if (local==1)printf("                                    ГЌГ Г±ГІГ°Г®Г©ГЄГЁ");
 					else
 						printf("                                     Options");
 					printf("\n\n\n\n\n");
@@ -744,7 +744,7 @@ int main() {
 						setlocale(LC_ALL,"Rus");
 					} else
 						printf("%+35c", c[1]);
-					if (local==1)printf("1.Тип игры\n");
+					if (local==1)printf("1.Г’ГЁГЇ ГЁГЈГ°Г»\n");
 					else
 						printf("1.Type game\n");
 					if(local==1) {
@@ -753,7 +753,7 @@ int main() {
 						setlocale(LC_ALL,"Rus");
 					} else
 						printf("%+37c", c[2]);
-					if (local==1)printf("2.Звук\n");
+					if (local==1)printf("2.Г‡ГўГіГЄ\n");
 					else
 						printf("2.Sound\n");
 					if(local==1) {
@@ -762,7 +762,7 @@ int main() {
 						setlocale(LC_ALL,"Rus");
 					} else
 						printf("%+35c",c[3]);
-					if (local==1)printf("3.Язык\n");
+					if (local==1)printf("3.ГџГ§Г»ГЄ\n");
 					else
 						printf("3.Language\n");
 					if(local==1) {
@@ -771,7 +771,7 @@ int main() {
 						setlocale(LC_ALL,"Rus");
 					} else
 						printf("%+38c", c[4]);
-					if (local==1)printf("4.Назад\n");
+					if (local==1)printf("4.ГЌГ Г§Г Г¤\n");
 					else
 						printf("4.Back\n");
 
@@ -840,17 +840,17 @@ int main() {
 						case 1: //type game
 
 							if (difficulty == 1)	{
-								if(local==1)printf("Сложность: 30 ходов \n\n");
+								if(local==1)printf("Г‘Г«Г®Г¦Г­Г®Г±ГІГј: 30 ГµГ®Г¤Г®Гў \n\n");
 								else
 									printf("difficulty: 30 turns \n\n");
 							}
 
 							if (difficulty == 0) {
-								if(local==1)printf("Сложность: без ограничения на кол-во ходов \n\n");
+								if(local==1)printf("Г‘Г«Г®Г¦Г­Г®Г±ГІГј: ГЎГҐГ§ Г®ГЈГ°Г Г­ГЁГ·ГҐГ­ГЁГї Г­Г  ГЄГ®Г«-ГўГ® ГµГ®Г¤Г®Гў \n\n");
 								else
 									printf("difficulty: No limits \n\n");
 							}
-							if(local==1)printf("Сменить сложность? Y-да, N-нет");
+							if(local==1)printf("Г‘Г¬ГҐГ­ГЁГІГј Г±Г«Г®Г¦Г­Г®Г±ГІГј? Y-Г¤Г , N-Г­ГҐГІ");
 							else
 								printf("Change difficulty? Y-yes, N-no");
 							x=0;
@@ -869,7 +869,7 @@ int main() {
 										difficulty = 1;
 										printf("\n\n\n\n");
 									}
-								if (local==1)printf("Сложность заменена");
+								if (local==1)printf("Г‘Г«Г®Г¦Г­Г®Г±ГІГј Г§Г Г¬ГҐГ­ГҐГ­Г ");
 								else
 									printf("Difficulty change");
 								getch();
@@ -880,17 +880,17 @@ int main() {
 						case 2: //sound
 
 							if (sound == 7)	{
-								if (local==1)printf("Звук: Включен\n\n");
+								if (local==1)printf("Г‡ГўГіГЄ: Г‚ГЄГ«ГѕГ·ГҐГ­\n\n");
 								else
 									printf("Sound: ON \n\n");
 							}
 
 							else {
-								if (local==1)printf("Звук: Выключен\n\n");
+								if (local==1)printf("Г‡ГўГіГЄ: Г‚Г»ГЄГ«ГѕГ·ГҐГ­\n\n");
 								else
 									printf("Sound: OFF\n\n");
 							}
-							if (local==1)printf("Переключить звук? Y-да, N-нет");
+							if (local==1)printf("ГЏГҐГ°ГҐГЄГ«ГѕГ·ГЁГІГј Г§ГўГіГЄ? Y-Г¤Г , N-Г­ГҐГІ");
 							else
 								printf("Switch sound? Y-yes, N-no");
 							x=0;
@@ -909,7 +909,7 @@ int main() {
 										sound = 7;
 										printf("\n\n\n\n");
 									}
-								if (local==1)printf("Звук переключён");
+								if (local==1)printf("Г‡ГўГіГЄ ГЇГҐГ°ГҐГЄГ«ГѕГ·ВёГ­");
 								else
 									printf("Sound change");
 								getch();
@@ -920,13 +920,13 @@ int main() {
 						case 3: //language
 
 							if (local == 1)	{
-								printf("Язык: Русский \n\n");
+								printf("ГџГ§Г»ГЄ: ГђГіГ±Г±ГЄГЁГ© \n\n");
 							}
 
 							else {
 								printf("Language: English \n\n");
 							}
-							if (local==1)printf("Поменять язык? Y-да, N-нет");
+							if (local==1)printf("ГЏГ®Г¬ГҐГ­ГїГІГј ГїГ§Г»ГЄ? Y-Г¤Г , N-Г­ГҐГІ");
 							else
 								printf("Change language? Y-yes, N-no");
 
@@ -948,7 +948,7 @@ int main() {
 									}
 								if (local==1) {
 									setlocale(LC_ALL,"Rus");
-									printf("Язык сменён");
+									printf("ГџГ§Г»ГЄ Г±Г¬ГҐГ­ВёГ­");
 								} else {
 									setlocale(LC_ALL,"C");
 									printf("Language change");

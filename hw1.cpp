@@ -7,7 +7,7 @@
 #include<math.h>
 #include<time.h>
 #include<locale.h>
-//#include<unistd.h>  //äëÿ sleep() - Ïàóçà íà êîë-âî ñåêóíä
+#include<dos.h>  //äëÿ sleep() - Ïàóçà íà êîë-âî ñåêóíä
 #include<Windows.h>
 //printf("%c",7); - Âîñïðîèçâåäåíèå çâóêà
 //printf("%c",219); - Êîðàáëü

@@ -1,12 +1,13 @@
 #undef UNICODE
 
+#include<iostream>
 #include<stdio.h>
 #include<stdlib.h>
 #include<conio.h>
 #include<math.h>
 #include<time.h>
 #include<locale.h>
-#include<unistd.h>  //äëÿ sleep() - Ïàóçà íà êîë-âî ñåêóíä
+//#include<unistd.h>  //äëÿ sleep() - Ïàóçà íà êîë-âî ñåêóíä
 #include<Windows.h>
 //printf("%c",7); - Âîñïðîèçâåäåíèå çâóêà
 //printf("%c",219); - Êîðàáëü

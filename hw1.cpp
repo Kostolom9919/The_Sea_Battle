@@ -11,6 +11,7 @@
 #include<Windows.h>
 //printf("%c",7); - Âîñïðîèçâåäåíèå çâóêà
 //printf("%c",219); - Êîðàáëü
+using namespace std;
 
 int local=0;
 

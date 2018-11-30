@@ -403,7 +403,7 @@ int main() {
 								if(prov1==0) {
 									if(local==1)printf("\nÍåò ìåñòà");
 									else printf("\nNot enough");
-									sleep(1);
+									//sleep(1);
 								}
 							} while(prov1==0);
 							for(i1=1; i1<=10; i1++)
@@ -509,7 +509,7 @@ int main() {
 										if(local==1)printf("\nÒàêîãî ñòîëáöà íåò!");
 										else printf("\nThe entered column is missing!");
 										ran2=11;
-										sleep(1);
+									//sleep(1);
 										break;
 								}
 							} while(ran2>10);
@@ -539,7 +539,7 @@ int main() {
 							if ((b1[ran1][ran2]==1)||(b1[ran1][ran2]<0)) {
 								if(local==1)printf("\nÑòðåëÿéòå çàíîãî\n");
 								else printf("\nShoot again\n");
-								sleep(1);
+								//sleep(1);
 							}
 						} while((b1[ran1][ran2]==1)||(b1[ran1][ran2]<0));
 						if (b1[ran1][ran2]==0) {
@@ -548,7 +548,7 @@ int main() {
 							if(local==1)printf("\nÂû ïðîìàõíóëèñü\n");
 							else printf("\nYou missed");
 							prov1=0;
-							sleep(1);
+							//sleep(1);
 						}
 
 						else if (b1[ran1][ran2]>1) {
@@ -574,7 +574,7 @@ int main() {
 							}
 							baLL1++;
 							prov1=1;
-							sleep(1);
+							//sleep(1);
 						}
 					} while((baLL1<20)&&(prov1==1));
 
@@ -662,7 +662,7 @@ int main() {
 								vivod1(a1,a2);
 								if(local==1)printf("\nÊîìïüþòåð ïðîìàõíóëñÿ\n");
 								else printf("\nComputer missed\n");
-								sleep(1);
+								//sleep(1);
 							} else if (a1[ran1][ran2]>1) {
 								a1[ran1][ran2]*=-1;
 								b2[ran1][ran2]=a1[ran1][ran2];

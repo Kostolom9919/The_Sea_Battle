@@ -87,7 +87,7 @@ int main() {
 	int ran1=0,ran2=0,t=1,baLL1=0,baLL2=0,x2[8]= {0,0,0,0,0,0,0,0},p2=0,prov1=0,prov2=0,proof1=0,proof2=0;
 	int i=0,j=0,g=0,i1=0,j1=0,x=0,min=0,max=0,w=30;
 	char ran,c1;
-	srand(time(NULL));
+	srand((time_t)time(NULL));
 	do {
 		do {
 
